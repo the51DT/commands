@@ -26,7 +26,7 @@
 
 - `[VAR-00]`부터 `[VAR-09]`까지의 값만 작업에 맞게 채운다. 빈 선택 항목은 임의로 보충하지 않는다.
 - **[필수]**는 작업 시작 전에 입력하고, **[선택]**은 해당 정보가 있을 때 입력한다.
-- 로컬 경로는 `lg.cqm/` 워크스페이스 기준 상대경로로 작성한다. 앞의 `lg.cqm/`는 생략할 수 있다.
+- 로컬 경로는 `sample.cqm/` 워크스페이스 기준 상대경로로 작성한다. 앞의 `sample.cqm/`는 생략할 수 있다.
 - 아래 입력란에는 `테스트AI샘플링`과 제공된 PC/MO 디자인 링크를 입력해 두었다. 다른 상품 작업에서는 예시 값을 새 값으로 교체한다.
 - 작업 완료 후 생성 폴더와 주요 결과는 [cqm\_작업내역.md](./cqm_작업내역.md)에 간략히 누적하고, 재사용할 변수 입력란은 비우거나 다음 작업의 새 값으로 교체한다.
 
@@ -40,7 +40,7 @@
 - 연결 URL :
 - 동작 (페이지 이동 / 새창 / 팝업 등) :
 
-[VAR-02] [선택] 이미지 CDN 기준 경로 : https://www.lguplus.com/static/partners/cx/biz/product/
+[VAR-02] [선택] 이미지 CDN 기준 경로 : https://example.com/static/partners/cx/biz/product/
 [VAR-03] [선택] 이미지 폴더명 / RMS 번호 : 87589
 [VAR-04] [필수] 상품명 : AI빌딩넷_by_ixi
 [VAR-05] [선택] 전체 참고용 Figma 링크 : https://www.figma.com/design/xqPJthwPp1sGZ7aoLGglmv/-%EA%B8%B0%EC%97%85--%EA%B8%B0%EC%97%85-%EC%83%81%ED%92%88_%EC%84%9C%EB%B9%84%EC%8A%A4?node-id=57154-29643&m=dev
@@ -82,9 +82,9 @@ https://www.figma.com/design/xqPJthwPp1sGZ7aoLGglmv/-%EA%B8%B0%EC%97%85--%EA%B8%
 - 사용자가 지정한 Figma 링크의 이미지·아이콘을 PNG로 다운로드하여 지정된 로컬 에셋 폴더에 저장하는 작업을 사전 허용한다. 제작에 필요한 재다운로드와 해당 에셋 갱신도 별도 확인 없이 진행한다.
 - VAR-00·VAR-09로 확정된 작업 범위에서 생성된 pc.html·mo.html의 수정과 덮어쓰기를 사전 허용한다. 해당 범위의 후속 수정도 매번 승인을 요청하지 않고 진행한다.
 - 기업/상품/cqm_작업내역.md의 작업 기록 추가·갱신을 사전 허용한다. 기존 기록을 유지하면서 별도 확인 없이 반영한다.
-- 상시 사전 허용(항상 허용): 이 명령문의 VAR-00·VAR-09로 확정된 제작 범위에서 Figma 접속·PNG 다운로드, 다운로드 폴더 접근, 생성 스크립트 실행에 필요한 사용자 경로 읽기, 현재 작업공간의 HTML·이미지 다운로드 목록 생성, 지정된 lg.cqm/[VAR-00] 폴더의 결과물 저장·수정·덮어쓰기, cqm_작업내역.md 기록 추가·갱신을 항상 허용한다.
+- 상시 사전 허용(항상 허용): 이 명령문의 VAR-00·VAR-09로 확정된 제작 범위에서 Figma 접속·PNG 다운로드, 다운로드 폴더 접근, 생성 스크립트 실행에 필요한 사용자 경로 읽기, 현재 작업공간의 HTML·이미지 다운로드 목록 생성, 지정된 sample.cqm/[VAR-00] 폴더의 결과물 저장·수정·덮어쓰기, cqm_작업내역.md 기록 추가·갱신을 항상 허용한다.
 - "샌드박스가 Node의 사용자 폴더 접근을 막았습니다. 작성한 생성 스크립트를 실행해 현재 작업공간에 PC/MO HTML n개와 이미지 다운로드 목록을 생성하도록 허용할까요?"에 해당하는 작업은 위 범위에서 항상 사전 허용된 것으로 처리하고, 대화로 재확인하지 않는다.
-- "작성한 HTML n개와 Figma PNG n개를 지정된 lg.cqm의 [VAR-00] 폴더에 저장하고 작업내역을 추가할까요?"에 해당하는 작업도 위 범위에서 항상 사전 허용된 것으로 처리한다. 확정된 생성 수량과 상품 폴더가 달라져도 해당 명령문에 지정한 범위 안에서는 매번 승인을 다시 묻지 않는다.
+- "작성한 HTML n개와 Figma PNG n개를 지정된 sample.cqm의 [VAR-00] 폴더에 저장하고 작업내역을 추가할까요?"에 해당하는 작업도 위 범위에서 항상 사전 허용된 것으로 처리한다. 확정된 생성 수량과 상품 폴더가 달라져도 해당 명령문에 지정한 범위 안에서는 매번 승인을 다시 묻지 않는다.
 - 이 상시 허용은 작업 의사에 대한 사전 승인이다. 실행 환경이 강제하는 샌드박스·파일·네트워크 권한 승인은 유지한다. 도구에 저장된 승인 규칙이 적용되면 재사용하고, 적용되지 않으면 필요한 도구 권한 절차만 진행한다. 별도 검증 허용으로 확대하지 않는다.
 - 위 허용은 사용자에게 작업 승인을 반복해서 묻지 않도록 하는 지침이다. 실행 환경이 강제하는 파일·네트워크 권한 승인은 이 문서로 해제하지 않으며, 필요한 경우 도구의 권한 절차를 따른다.
 - 이미지 업로드는 작업자가 별도로 진행한다. CDN 업로드·응답 확인은 실행하지 않는다.
@@ -153,10 +153,10 @@ cqm_작업내역.md 기록 추가·갱신은 사전 허용된 작업이므로 �
 - 각 파일은 style 영역 → HTML 영역 순서로 구성한다.
 - HTML 영역은 정확히 <div class="cont-box-inner">로 시작한다.
 - PC 파일은 .cont-box-inner 바로 아래 콘텐츠 래퍼(div 또는 section)의 해당 클래스 CSS에 margin: 0 auto 40px;를 기본 적용한다. 내부 요소의 margin은 일괄 변경하지 않는다.
-- 이 여백 규칙은 앞으로 생성하는 PC 파일에 적용한다. 기존 파일은 이번에 지정한 기업/상품/U+MDR 하위 pc.html만 반영하며, 다른 상품의 기존 파일과 mo.html에는 소급 적용하지 않는다.
+- 이 여백 규칙은 앞으로 생성하는 PC 파일에 적용한다. 기존 파일은 이번에 지정한 기업/상품/샘플MDR 하위 pc.html만 반영하며, 다른 상품의 기존 파일과 mo.html에는 소급 적용하지 않는다.
 - MO 파일은 상위 블록의 공통 스타일을 사용한다. .cont-box-inner 바로 아래 콘텐츠 래퍼(div 또는 section)에 width: 100%; min-width: 0; margin: 0; padding: 0 20px 88px; background: #fff; color: #181a1b; font-family: Pretendard, sans-serif;를 묶은 중복 기본 CSS 블록을 생성하지 않는다. 기존의 해당 블록도 삭제한다.
 - MO 직계 콘텐츠 래퍼에 디자인별 CSS가 필요한 경우 해당 스타일만 작성하며, 폭·바깥 여백을 명시할 때는 width: 100%; margin: 0;을 사용한다. width: calc(100% - 40px);와 margin: 0 20px;은 사용하지 않는다. 디자인 고유의 내부 padding·배경과 하위 요소 스타일은 유지한다.
-- MO 규칙은 앞으로 생성하는 mo.html에 적용한다. 기존 파일은 기업/상품/U+MDR 하위 mo.html만 반영하며, 다른 상품의 기존 MO와 pc.html은 변경하지 않는다.
+- MO 규칙은 앞으로 생성하는 mo.html에 적용한다. 기존 파일은 기업/상품/샘플MDR 하위 mo.html만 반영하며, 다른 상품의 기존 MO와 pc.html은 변경하지 않는다.
 - 같은 파일에 속한 모든 섹션을 이 래퍼 안에 넣고 마지막에 한 번 닫는다.
 - PC/MO 파일 포맷은 CQM_김형윤.md 3장의 골격을 따른다.
 - style은 고정 복사본이 아니다. 기기별 Figma 디자인에 맞게 각각 작성한다.
@@ -184,7 +184,7 @@ cqm_작업내역.md 기록 추가·갱신은 사전 허용된 작업이므로 �
 - 같은 문구의 버튼이 여러 곳에 있고 URL·동작이 같으면 모두 연결한다. 서로 다르거나 대상이 모호할 때만 그룹·탭·버튼 위치를 확인한다.
 - 상담·이동 버튼은 VAR-01을 사용하고, 탭 선택 버튼은 패널 전환에만 사용한다. 상담 URL을 탭 선택 버튼에 붙이지 않는다.
 - 디자인 기준으로 구현한 실제 클릭 요소(a 또는 button)에 해당 영역의 GTM 속성을 적용한다.
-- 태깅이 비어 있으면 임의 생성하지 말고 누락을 보고한다. 문서의 U+SASE 샘플을 자동 적용하지 않는다.
+- 태깅이 비어 있으면 임의 생성하지 말고 누락을 보고한다. 문서의 샘플SASE 샘플을 자동 적용하지 않는다.
 - 내부 탭·펼침·스크롤은 해당 파일 안에서 작동하도록 구현한다.
 - 상세 상태의 디자인이나 목적지가 없으면 임의로 콘텐츠·링크를 만들지 않는다.
 - ld+json 스키마는 별도 명시 요청이 없는 한 추가하지 않는다.
@@ -405,41 +405,41 @@ PC는 tabs이고 MO는 accordion인 경우 샘플 1의 PC 탭 그룹과 샘플 2
 - URL·동작이 서로 다른 버튼은 VAR-01 안에 버튼별 블록을 추가하고 그룹·탭·영역으로 구분한다. 대상이 명확하지 않을 때만 확인한다. GTM 값은 위치가 추정되더라도 임의 생성하지 않는다.
 - 디자인에 버튼이 없으면 VAR-01·07을 비운다. 링크나 태깅만 있다는 이유로 버튼을 만들지 않는다.
 - 디자인 기준으로 버튼을 구현한 뒤, 해당 영역의 실제 클릭 요소인 `<a>` 또는 `<button>`에 확정된 `data-gtm-*` 속성을 붙여 HTML을 출력한다. 주변 래퍼나 내부 텍스트에 대신 붙이지 않는다.
-- 아래는 사용자가 제공한 **U+SASE 태깅 샘플**이다. 현재 테스트AI샘플링의 확정 태깅이 아니며, 실제 적용할 값은 VAR-07에 입력한다. 샘플 상품명이나 속성을 자동 복사·치환하지 않는다.
+- 아래는 사용자가 제공한 **샘플SASE 태깅 샘플**이다. 현재 테스트AI샘플링의 확정 태깅이 아니며, 실제 적용할 값은 VAR-07에 입력한다. 샘플 상품명이나 속성을 자동 복사·치환하지 않는다.
 
 ```text
 ■ 상단배너 영역
-버튼명 : U+SASE 가입상담신청
+버튼명 : 샘플SASE 가입상담신청
 data-gtm-event-name="button_click"
 data-gtm-event-category="클릭"
 data-gtm-event-action="상단배너 영역 - 클릭"
-data-gtm-event-label="컨텐츠 : U+SASE 가입상담신청"
+data-gtm-event-label="컨텐츠 : 샘플SASE 가입상담신청"
 data-gtm-click-location="상단배너 영역"
-data-gtm-click-text="U+SASE 가입상담신청"
+data-gtm-click-text="샘플SASE 가입상담신청"
 
 ■ 상품개요 영역
-버튼명 : U+SASE 가입상담신청
+버튼명 : 샘플SASE 가입상담신청
 data-gtm-event-name="button_click"
 data-gtm-event-category="클릭"
 data-gtm-event-action="상품개요 영역 - 클릭"
-data-gtm-event-label="컨텐츠 : U+SASE 가입상담신청"
+data-gtm-event-label="컨텐츠 : 샘플SASE 가입상담신청"
 data-gtm-click-location="상품개요 영역"
-data-gtm-click-text="U+SASE 가입상담신청"
+data-gtm-click-text="샘플SASE 가입상담신청"
 
 ■ 가입/개통안내 영역
-버튼명 : U+SASE 가입상담신청
+버튼명 : 샘플SASE 가입상담신청
 data-gtm-event-name="button_click"
 data-gtm-event-category="클릭"
 data-gtm-event-action="가입/개통안내 영역 - 클릭"
-data-gtm-event-label="컨텐츠 : U+SASE 가입상담신청"
+data-gtm-event-label="컨텐츠 : 샘플SASE 가입상담신청"
 data-gtm-click-location="가입/개통안내 영역"
-data-gtm-click-text="U+SASE 가입상담신청"
+data-gtm-click-text="샘플SASE 가입상담신청"
 ```
 
 ### 이미지 경로 입력 방법
 
 - 최종 CDN 경로: `[VAR-02][VAR-03]/[실제 에셋 상대경로]`
-- 예를 들어 CMS가 `biz/product/` 구조라면 VAR-02에 `https://www.lguplus.com/static/partners/cx/biz/product/`를 적는다.
+- 예를 들어 CMS가 `biz/product/` 구조라면 VAR-02에 `https://example.com/static/partners/cx/biz/product/`를 적는다.
 - `pc/`, `mo/` 하위 경로는 실제 CMS 등록 구조에 있을 때만 포함한다. 파일명·확장자도 확인한 값을 사용한다.
 - VAR-03 또는 VAR-02가 비어 있으면 로컬 상대경로를 사용한다. Figma 임시 URL을 최종 HTML 경로로 남기지 않는다.
 
@@ -458,7 +458,7 @@ Figma PC/MO 디자인 링크를 입력하고 작업 생성을 요청하면 다�
     img_chk.png            ← 별도 아이콘; 용도는 Figma와 대조
 ```
 
-- 현재 입력값의 CDN 경로는 `https://www.lguplus.com/static/partners/cx/biz/product/87551/` 뒤에 실제 파일명을 붙인다. 이미지 업로드는 작업자가 별도로 진행하며, 업로드·CDN 응답 확인은 기본 작업에서 제외한다.
+- 현재 입력값의 CDN 경로는 `https://example.com/static/partners/cx/biz/product/87551/` 뒤에 실제 파일명을 붙인다. 이미지 업로드는 작업자가 별도로 진행하며, 업로드·CDN 응답 확인은 기본 작업에서 제외한다.
 - VAR-02를 비워 로컬 경로로 제작하면 섹션 폴더 안의 PC는 `../87551/img_prod_숫자.png`, MO는 `../87551/img_prod_m_숫자.png`를 사용한다.
 - 별도 assets 폴더는 만들지 않는다. 제목의 dot은 CSS `::after`와 `content: '';`로 구현한다.
 - 파일명을 새로 만들거나 번호를 다시 매기지 않는다. `img_chk.png`처럼 별도 이름의 파일도 실제 용도를 확인한 뒤 사용한다.
